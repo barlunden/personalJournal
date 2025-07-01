@@ -11,17 +11,25 @@ datasource db {
 }
 
 model JournalEntry {
-  id          Int       @id @default(autoincrement())
+  id          Int           @id @default(autoincrement())
   title       String
   content     String
-  dateCreated DateTime  @default(now())
-  keywords    Keyword[]  // Fjern alle referansar til journalEntryId her
+  dateCreated DateTime      @default(now())
   imageUrl    String?
   imageAlt    String?
+  keywords    Keyword[]     // Many-to-many
 }
 
 model Keyword {
-  id          Int            @id @default(autoincrement())
-  value       String         @unique
-  entries     JournalEntry[] // Many-to-many-relasjon
+  id      Int               @id @default(autoincrement())
+  value   String            @unique
+  entries JournalEntry[]    // Many-to-many
+}
+
+
+model Entry {
+  id       Int     @id @default(autoincrement())
+  title    String
+  content  String
+  imageUrl String?
 }
