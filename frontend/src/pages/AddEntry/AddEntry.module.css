@@ -1,0 +1,96 @@
+/* AddEntry.module.css */
+.add-entry-form {
+  background: #181c23;
+  border-radius: 1em;
+  box-shadow: 0 4px 24px #000a;
+  max-width: 700px;
+  margin: 0.5rem auto;
+  padding: 0rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.add-entry-form h2 {
+  margin-bottom: 1rem;
+  color: #ffe81f;
+  text-align: center;
+}
+
+.add-entry-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #ffe81f;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+}
+
+.add-entry-form input,
+.add-entry-form textarea {
+  margin-top: 0.3rem;
+  padding: 0.7em 1em;
+  border-radius: 0.7em;
+  border: none;
+  background: #232733;
+  color: #f4e7c5;
+  font-size: 1rem;
+  resize: vertical;
+  box-shadow: 0 1px 4px #0002;
+  transition: background 0.2s;
+}
+
+.add-entry-form input:focus,
+.add-entry-form textarea:focus {
+  background: #2d3342;
+  outline: 2px solid #ffe81f88;
+}
+
+.add-entry-form button[type="submit"] {
+  background: #ffe81f;
+  color: #181c23;
+  font-weight: bold;
+  border-radius: 0.7em;
+  padding: 0.8em 1.5em;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0003;
+  transition: background 0.2s, color 0.2s;
+}
+
+.add-entry-form button[type="submit"]:hover {
+  background: #7ec6f7;
+  color: #181c23;
+}
+
+.add-entry-form p {
+  margin: 0.5em 0 0 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.add-entry-form p[style*="color: green"] {
+  color: #7ec6f7 !important;
+}
+
+.add-entry-form p[style*="color: red"] {
+  color: #ff4d4f !important;
+}
+
+.aside-style {
+  position: sticky;
+  top: 2rem;
+  min-width: 220px;
+  max-width: 260px;
+  background-color: #232733;
+  color: #ffe81f;
+  border-radius: 1em;
+  padding: clamp(0.6em, 3vw, 1.2em);
+  font-size: 1em;
+  box-shadow: 0 2px 12px #0005;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  height: fit-content;
+}

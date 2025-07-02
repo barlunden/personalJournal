@@ -1,0 +1,122 @@
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1;
+  background: linear-gradient(90deg, #090a1a 60%, #23234b 100%);
+  border-bottom: 2px solid #00ffe7;
+  box-shadow: 0 2px 24px #00ffe744;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerLogo {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  user-select: none;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: clamp(1rem, 5vw, 3rem);
+  padding-block: clamp(0.5rem, 2vw, 1.2rem);
+}
+
+.navbarLinks {
+  display: flex;
+  gap: clamp(1rem, 5vw, 2.5rem);
+  list-style: none;
+}
+
+.navbarLinks .link {
+  color: #e0e0e0;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  letter-spacing: 0.08em;
+  padding: 0.4em 1.2em;
+  border-radius: 6px;
+  transition:
+    color 0.2s,
+    background 0.25s,
+    box-shadow 0.25s;
+  position: relative;
+}
+
+.navbarLinks .link:hover,
+.navbarLinks .link:focus {
+  color: #23234b;
+  background: linear-gradient(90deg, #00ffe7 0%, #ff00c8 100%);
+  box-shadow: 0 0 16px #ff00c8cc, 0 0 32px #00ffe7cc;
+  outline: none;
+}
+/* Button.module.css */
+.button {
+  background: transparent;
+  color: #7ec6f7;
+  font-family: inherit;
+  font-weight: bold;
+  border: 2px solid #7ec6f7;
+  border-radius: 0.7em;
+  padding: 0.7em 1.4em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+  margin: 0.3em 0;
+  display: inline-block;
+  box-shadow: 0 2px 8px #0003;
+}
+
+.button:hover,
+.button:focus {
+  background: #ffe81f;
+  color: #181c23;
+  border-color: #ffe81f;
+  box-shadow: 0 0 16px #ffe81f88, 0 2px 8px #000a;
+  outline: none;
+}
+
+.button:active {
+  background: #7ec6f7;
+  color: #181c23;
+  border-color: #7ec6f7;
+  box-shadow: 0 1px 4px #0002;
+}
+
+.searchForm {
+  display: flex;
+  gap: 1rem;
+}
+
+.input {
+  background-color: #e0e0e0;
+  border: 2px solid #7ec6f7;
+  border-radius: 0.7em;
+  padding: 1em 1em;
+}
+/* Responsiv tilpassing for mobil */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: clamp(0.5rem, 5vw, 1.5rem);
+    padding-block: clamp(0.5rem, 3vw, 1.2rem);
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+    margin-top: 0.5em;
+  }
+  .navbar-logo {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+  }
+}

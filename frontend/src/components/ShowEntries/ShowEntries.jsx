@@ -1,0 +1,58 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import styles from "./ShowEntries.module.css";
+import ReactMarkdown from "react-markdown";
+
+function ShowEntries() {
+  const [entries, setEntries] = useState([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    async function fetchEntries() {
+      try {
+        const res = await fetch("/api/get-entries");
+        if (!res.ok) throw new Error("Network error: " + res.status);
+        const data = await res.json();
+        setEntries(Array.isArray(data) ? data : data.entries || []);
+      } catch (err) {
+        setError("Could not fetch entries: " + err.message);
+      }
+    }
+    fetchEntries();
+  }, []);
+
+  if (error) return <div>{error}</div>;
+  if (!entries.length) return <div>Loading...</div>;
+
+  return (
+    <section className="grid-auto-fill">
+      {entries.map((entry) => (
+        <div className={styles.oppslag}>
+          <h2>{entry.title}</h2>
+          <div style={{ margin: "0.3em 0 1em 0" }}>
+            {entry.keywords && entry.keywords.length > 0 && (
+              <span>
+                {entry.keywords.map((kw) => (
+                  <span
+                    key={kw.id}
+                  >
+                    {kw.value.toLowerCase()}
+                  </span>
+                ))}
+              </span>
+            )}
+          </div>
+          <ReactMarkdown>
+            {entry.content.length > 200
+              ? entry.content.slice(0, 200) + "... "
+              : entry.content}
+          </ReactMarkdown>
+          <Link to={`/entry/${entry.id}`}>Read more</Link>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+export default ShowEntries;

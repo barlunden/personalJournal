@@ -1,0 +1,33 @@
+.keywordListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1.2em 0;
+}
+
+.keywordBadge {
+  background: #e0e0e0;
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.8rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.keywordBadge:hover,
+.keywordBadge:focus {
+  background: #ffe81f;
+  color: #181c23;
+  outline: none;
+}
+
+.keywordCount {
+  margin-left: 0.4em;
+  color: #7ec6f7;
+  font-size: 0.95em;
+  font-weight: 400;
+}

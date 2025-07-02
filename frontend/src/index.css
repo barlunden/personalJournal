@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+/* 1. Remove margin, padding and set border-box as default */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove default list style and link style */
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Inherit font and remove outline on buttons and input */
+button, input, select, textarea {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* Make images and media responsive */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Base body styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0d13;      /* Deep dark blue-black */
+  color: #f4e7c5;           /* Warm light beige for contrast */
+  font-family: 'Barlow Condensed', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Responsive typography for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Condensed', 'Segoe UI', Arial, sans-serif;
+  color: #ffe81f;           /* Star Wars yellow for headings */
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 8px #000a;
+}
+
+h1 { font-size: clamp(2.2rem, 6vw, 3.5rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.9rem; }
+
+/* Responsiv brødtekst */
+p, li, a {
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+}
+
+p {
+  text-align: left;
+  padding-bottom: 1em;
+  letter-spacing: 0.06rem;
+}
+
+/* Links */
+a {
+  color: #7ec6f7;           /* Lys blå aksent */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ffe81f;           /* Gul ved hover */
+}
+
+/* Extra: some "force glow" on important elements */
+h1, h2 {
+  text-shadow: 0 0 16px #ffe81f88, 0 2px 8px #000a;
+}
+
+/* Added space and simple layout */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem clamp(1rem, 5vw, 2rem);
+}
+
+.grid-auto-fill {
+  --grid-min-col-size: 400px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-min-col-size), 100%), 1fr));
+  gap: 1rem;
+  justify-content: center;
+}

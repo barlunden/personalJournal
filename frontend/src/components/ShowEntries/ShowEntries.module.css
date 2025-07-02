@@ -1,0 +1,63 @@
+.oppslag {
+  background: hsl(222, 15%, 13%); /* #181c23 */
+  border-radius: 1.2rem; 
+  box-shadow: 0 4px 24px hsla(0, 0%, 0%, 0.66); /* #000a */
+  padding: clamp(0.5rem, 3vw, 1rem) clamp(1rem, 5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: hsl(41, 69%, 86%); /* #f4e7c5 */
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.oppslag:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.8); /* #000c */
+}
+
+.oppslag h2 {
+  color: hsl(51, 100%, 60%); /* #ffe81f */
+  font-family: 'Pathway Gothic One', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.66); /* #000a */
+}
+
+.oppslag p {
+  flex: 1;
+  margin-bottom: 0.2rem;
+  color: hsl(41, 69%, 86%); /* #f4e7c5 */
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.oppslag a {
+  align-self: flex-end;
+  background: hsl(51, 100%, 60%); /* #ffe81f */
+  color: hsl(222, 15%, 13%); /* #181c23 */
+  font-weight: bold;
+  border-radius: 0.7em;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.19); /* #0003 */
+  transition: background 0.2s, color 0.2s;
+}
+
+.oppslag a:hover {
+  background: hsl(200, 86%, 72%); /* #7ec6f7 */
+  color: hsl(222, 15%, 13%); /* #181c23 */
+}
+
+.oppslag span {
+  background-color: hsl(222, 18%, 17%); /* #232733 */
+  color: hsl(51, 100%, 60%); /* #ffe81f */
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  border-radius: 0.7em;
+  padding: 0.2em 0.7em;
+}

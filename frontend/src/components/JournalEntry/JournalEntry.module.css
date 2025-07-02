@@ -1,0 +1,42 @@
+/* Button.module.css */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em; /* space between buttons */
+  margin: 1.5em 0;
+}
+
+.button {
+  background: #ffe81f;
+  color: #181c23;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.7em;
+  padding: 0.8em 1.5em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 8px #0003;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.1s;
+  outline: none;
+  margin: 0.3em 0;
+  display: inline-block;
+}
+
+.button:hover,
+.button:focus {
+  background: #7ec6f7;
+  color: #181c23;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.button:active {
+  background: #ffe81f;
+  color: #181c23;
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px #0002;
+}

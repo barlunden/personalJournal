@@ -8,15 +8,18 @@ const addEntrySchema = z.object({
   imageAlt: z.string().optional(),
   keywords: z.array(z.string().min(1)).optional(),
 });
-
+ 
 const entryArraySchema = z.array(addEntrySchema);
 
-const entryParamsSchema = z.object({
-  id: z.string(),
+const searchQuerySchema = z.object({
+  keyword: z.string().min(1).max(50),
 });
+
+const entryParamsSchema = z.object({ entryId: z.string().regex(/^\d+$/) });
 
 module.exports = {
   addEntrySchema,
   entryArraySchema,
   entryParamsSchema,
+  searchQuerySchema,
 };
