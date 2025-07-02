@@ -39,22 +39,30 @@ img, picture, video, canvas, svg {
   height: auto;
 }
 
+/* Layout root for sticky footer */
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Base body styles */
 body {
-  margin: 0;
-  padding: 0;
   background: #0a0d13;      /* Deep dark blue-black */
   color: #f4e7c5;           /* Warm light beige for contrast */
   font-family: 'Barlow Condensed', 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
-  min-height: 100vh;
 }
 
 /* Responsive typography for headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Barlow Condensed', 'Segoe UI', Arial, sans-serif;
   color: #ffe81f;           /* Star Wars yellow for headings */
-  margin-top: 1.5em;
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
   letter-spacing: 0.05em;
   text-shadow: 0 2px 8px #000a;
@@ -102,7 +110,6 @@ main {
 
 .grid-auto-fill {
   --grid-min-col-size: 400px;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-min-col-size), 100%), 1fr));
   gap: 1rem;

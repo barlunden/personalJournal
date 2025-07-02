@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 
@@ -16,28 +16,37 @@ export default function Navbar() {
 
   return (
     <header className={styles.header}>
-      
-        <h1 className={styles.headerLogo}>The Chronicles of the Jedi Mind</h1>
+      <h1 className={styles.headerLogo}>The Chronicles of the Jedi Mind</h1>
       <div>
         <nav className={styles.navbar}>
           <div className={styles.navbarLinks}>
-            <Link to="/" className={styles.link}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
+            >
               Home
-            </Link>
-            <Link to="/add" className={styles.link}>
+            </NavLink>
+            <NavLink
+              to="/add"
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
+            >
               Add Entry
-            </Link>
+            </NavLink>
           </div>
           <form className={styles.searchForm} onSubmit={handleSearch}>
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Søk etter keyword"
+              placeholder="Search for keyword or title"
               className={styles.input}
             />
-            <button type="submit" className={styles.button}>
-              Søk
+            <button type="submit" className={styles.link}>
+              Search
             </button>
           </form>
         </nav>

@@ -1,0 +1,54 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.heroRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.heroText {
+  flex: 2;
+  min-width: 0;
+}
+
+.heroText h2 {
+    margin-top: 1rem;
+}
+
+.yodaImage {
+  flex: 1;
+  display: block;
+  margin: 2.5rem 0;
+  width: 150px;
+  border-radius: 1.5em;
+  box-shadow:
+    0 0 32px 8px #7ec6f7aa,
+    0 0 8px 2px #ffe81faa,
+    0 2px 8px #000a;
+  border: 2px solid #ffe81f;
+  transition: box-shadow 0.3s;
+}
+
+.yodaImage:hover {
+  box-shadow:
+    0 0 48px 16px #ffe81faa,
+    0 0 16px 4px #7ec6f7cc,
+    0 4px 16px #000c;
+  border-color: #7ec6f7;
+}
+
+/* Responsiv til mobil */
+@media (max-width: 700px) {
+  .heroRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .yodaImage {
+    margin: 0 auto;
+  }
+}

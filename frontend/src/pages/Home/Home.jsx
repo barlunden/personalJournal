@@ -8,15 +8,14 @@ import bio from '../../assets/jedi.md?raw'
 export default function Home() {
   return (
     <section className={styles.section}>
-      <div style={{ textAlign: "center", marginTop: "3rem" }}>
-        
-        <ReactMarkdown>
-          {bio}
-        </ReactMarkdown>
+      <div className={styles.heroRow}>
+        <div className={styles.heroText}>
+          <ReactMarkdown>{bio}</ReactMarkdown>
+        </div>
         <img
           src="https://pm1.aminoapps.com/6944/5facc391e1fd7025e5bbef12966e162d2c76224cr1-615-1125v2_hq.jpg"
           alt="Yoda"
-          style={{ width: "150px", marginTop: "2rem" }}
+          className={styles.yodaImage}
         />
       </div>
       <ShowEntries />

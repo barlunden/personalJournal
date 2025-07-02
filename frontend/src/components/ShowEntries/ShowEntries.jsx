@@ -30,7 +30,7 @@ function ShowEntries() {
       {entries.map((entry) => (
         <div className={styles.oppslag}>
           <h2>{entry.title}</h2>
-          <div style={{ margin: "0.3em 0 1em 0" }}>
+          <div style={{ margin: "0.4em 0" }}>
             {entry.keywords && entry.keywords.length > 0 && (
               <span>
                 {entry.keywords.map((kw) => (

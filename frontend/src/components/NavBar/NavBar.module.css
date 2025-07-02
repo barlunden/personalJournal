@@ -28,69 +28,6 @@
   padding-block: clamp(0.5rem, 2vw, 1.2rem);
 }
 
-.navbarLinks {
-  display: flex;
-  gap: clamp(1rem, 5vw, 2.5rem);
-  list-style: none;
-}
-
-.navbarLinks .link {
-  color: #e0e0e0;
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  letter-spacing: 0.08em;
-  padding: 0.4em 1.2em;
-  border-radius: 6px;
-  transition:
-    color 0.2s,
-    background 0.25s,
-    box-shadow 0.25s;
-  position: relative;
-}
-
-.navbarLinks .link:hover,
-.navbarLinks .link:focus {
-  color: #23234b;
-  background: linear-gradient(90deg, #00ffe7 0%, #ff00c8 100%);
-  box-shadow: 0 0 16px #ff00c8cc, 0 0 32px #00ffe7cc;
-  outline: none;
-}
-/* Button.module.css */
-.button {
-  background: transparent;
-  color: #7ec6f7;
-  font-family: inherit;
-  font-weight: bold;
-  border: 2px solid #7ec6f7;
-  border-radius: 0.7em;
-  padding: 0.7em 1.4em;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s,
-    box-shadow 0.2s;
-  margin: 0.3em 0;
-  display: inline-block;
-  box-shadow: 0 2px 8px #0003;
-}
-
-.button:hover,
-.button:focus {
-  background: #ffe81f;
-  color: #181c23;
-  border-color: #ffe81f;
-  box-shadow: 0 0 16px #ffe81f88, 0 2px 8px #000a;
-  outline: none;
-}
-
-.button:active {
-  background: #7ec6f7;
-  color: #181c23;
-  border-color: #7ec6f7;
-  box-shadow: 0 1px 4px #0002;
-}
-
 .searchForm {
   display: flex;
   gap: 1rem;
@@ -102,6 +39,42 @@
   border-radius: 0.7em;
   padding: 1em 1em;
 }
+
+/* NavLink-stil (harmonisert med knappane) */
+.link {
+  color: #7ec6f7;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.7em 1.4em;
+  border-radius: 0.7em;
+  border: 2px solid transparent;
+  background: transparent;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+  margin: 0.3em 0.5em;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #0003;
+}
+
+.link:hover,
+.link:focus {
+  color: #ffe81f;
+  background: #181c23;
+  outline: none;
+}
+
+.active {
+  background: #ffe81f;
+  color: #181c23;
+  border-color: #ffe81f;
+  box-shadow: 0 0 16px #ffe81f88, 0 2px 8px #000a;
+}
+
 /* Responsiv tilpassing for mobil */
 @media (max-width: 700px) {
   .navbar {
@@ -110,7 +83,7 @@
     padding-inline: clamp(0.5rem, 5vw, 1.5rem);
     padding-block: clamp(0.5rem, 3vw, 1.2rem);
   }
-  .navbar-links {
+  .navbarLinks {
     flex-direction: column;
     gap: 0.5em;
     width: 100%;
