@@ -36,6 +36,14 @@ export default function Navbar() {
             >
               Add Entry
             </NavLink>
+            <NavLink
+              to="/read"
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
+            >
+              Entries
+            </NavLink>
           </div>
           <form className={styles.searchForm} onSubmit={handleSearch}>
             <input
@@ -43,7 +51,7 @@ export default function Navbar() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search for keyword or title"
-              className={styles.input}
+              className={styles.searchInput}
             />
             <button type="submit" className={styles.link}>
               Search

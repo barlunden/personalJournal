@@ -33,11 +33,12 @@
   gap: 1rem;
 }
 
-.input {
+.searchInput {
   background-color: #e0e0e0;
   border: 2px solid #7ec6f7;
   border-radius: 0.7em;
-  padding: 1em 1em;
+  padding: 0 12px;
+  width: 200px;
 }
 
 /* NavLink-stil (harmonisert med knappane) */

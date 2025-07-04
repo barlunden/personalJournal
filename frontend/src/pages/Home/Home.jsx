@@ -18,7 +18,7 @@ export default function Home() {
           className={styles.yodaImage}
         />
       </div>
-      <ShowEntries />
+      <ShowEntries limit={4}/>
       <KeywordList />
     </section>
   );

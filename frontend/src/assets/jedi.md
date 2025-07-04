@@ -1,4 +1,4 @@
-## Hello there fellow seekers of the Force!
+### Hello there fellow seekers of the Force!
 
 My name is **Elira Voss**, and I’m a Jedi hopeful—part student, part wanderer, and, perhaps, a bit of an influencer in this new era after the fall of the Empire. I grew up on the edge of the Outer Rim, dreaming of ancient temples and
 listening to stories about the Jedi who once brought balance to the galaxy.

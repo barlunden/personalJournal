@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./ShowEntries.module.css";
 import ReactMarkdown from "react-markdown";
 
-function ShowEntries() {
+function ShowEntries({ limit }) {
   const [entries, setEntries] = useState([]);
   const [error, setError] = useState("");
 
@@ -25,9 +25,11 @@ function ShowEntries() {
   if (error) return <div>{error}</div>;
   if (!entries.length) return <div>Loading...</div>;
 
+  const entriesToShow = limit ? entries.slice(0, limit) : entries
+
   return (
     <section className="grid-auto-fill">
-      {entries.map((entry) => (
+      {entriesToShow.map((entry) => (
         <div className={styles.oppslag}>
           <h2>{entry.title}</h2>
           <div style={{ margin: "0.4em 0" }}>

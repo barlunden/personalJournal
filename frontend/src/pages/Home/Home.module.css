@@ -15,14 +15,10 @@
   min-width: 0;
 }
 
-.heroText h2 {
-    margin-top: 1rem;
-}
-
 .yodaImage {
   flex: 1;
   display: block;
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
   width: 150px;
   border-radius: 1.5em;
   box-shadow:
@@ -49,6 +45,6 @@
     gap: 1.5rem;
   }
   .yodaImage {
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
   }
 }
