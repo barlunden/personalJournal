@@ -25,11 +25,3 @@ model Keyword {
   value   String            @unique
   entries JournalEntry[]    // Many-to-many
 }
-
-
-model Entry {
-  id       Int     @id @default(autoincrement())
-  title    String
-  content  String
-  imageUrl String?
-}

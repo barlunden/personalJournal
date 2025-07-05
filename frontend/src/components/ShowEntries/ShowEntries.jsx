@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./ShowEntries.module.css";
 import ReactMarkdown from "react-markdown";
 
-function ShowEntries({ limit }) {
+function ShowEntries({ limit, grid = false }) {
   const [entries, setEntries] = useState([]);
   const [error, setError] = useState("");
 
@@ -28,10 +28,11 @@ function ShowEntries({ limit }) {
   const entriesToShow = limit ? entries.slice(0, limit) : entries
 
   return (
-    <section className="grid-auto-fill">
+    <section className={grid ? "grid-auto-fill" : "single-column"}>
       {entriesToShow.map((entry) => (
         <div className={styles.oppslag}>
           <h2>{entry.title}</h2>
+          <p>{new Date(entry.dateCreated).toLocaleDateString("en-GB")}</p>
           <div style={{ margin: "0.4em 0" }}>
             {entry.keywords && entry.keywords.length > 0 && (
               <span>
