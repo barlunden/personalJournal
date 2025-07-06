@@ -61,3 +61,14 @@
   border-radius: 0.7em;
   padding: 0.2em 0.7em;
 }
+
+/* .titleLink {
+  color: #7ec6f7;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.titleLink:hover,
+.titleLink:focus {
+  color: #ffe81f;
+  text-decoration: underline;
+} */

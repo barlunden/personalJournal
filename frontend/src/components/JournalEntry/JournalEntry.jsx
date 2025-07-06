@@ -72,7 +72,13 @@ export default function JournalEntry() {
       {entry.keywords && entry.keywords.length > 0 ? (
         <div>
           {entry.keywords.map((kw, idx) => (
-            <span key={kw.id ?? idx}>{kw.value ?? kw}</span>
+            <Link
+              key={kw.id ?? idx}
+              to={`/search?keyword=${encodeURIComponent(kw.value)}`}
+              className={styles.keywordLink}
+            >
+              {kw.value}
+            </Link>
           ))}
         </div>
       ) : (
